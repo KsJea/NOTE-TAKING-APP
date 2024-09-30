@@ -1,0 +1,60 @@
+<!-- index.html -->
+
+<!-- Documento HTML5 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Título de la página -->
+    <title>Projecto - Arquitectura de Software</title>
+    <!-- Enlace a archivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Título de la aplicación -->
+    <h1>NOTAS RAPIDAS - APP</h1>
+
+    <!-- Formulario para crear una nota -->
+    <form id="note-form">
+      <!-- Campo de texto para el título de la nota -->
+      <input type="text" id="title" placeholder="Título de la nota">
+      <!-- Campo de texto área para el contenido de la nota -->
+      <textarea id="content" placeholder="Contenido de la nota"></textarea>
+      <!-- Botón para crear la nota -->
+      <button id="create-note" onclick="createNote()">Crear nota</button>
+    </form>
+
+    <!-- Contenedor para la lista de notas -->
+    <div id="note-list">
+      <!-- Lista de notas (vacía por ahora) -->
+      <ul id="note-list-ul"></ul>
+    </div>
+
+    <!-- Botones para leer, actualizar y eliminar notas -->
+    <!-- Botón para leer notas -->
+    <button id="read-notes" onclick="showNotes()">Leer notas</button>
+    <!-- Botón para actualizar nota (oculto por ahora) -->
+    <button id="update-note" style="display: none;">Actualizar nota</button>
+    <!-- Botón para eliminar nota -->
+    <button id="delete-note" onclick="deleteNote()">Eliminar nota</button>
+
+    <!-- Modal para editar nota (oculto por ahora) -->
+    <div id="edit-note-modal" style="display: none;">
+      <!-- Título del modal -->
+      <h2>Editar nota</h2>
+      <!-- Formulario para editar nota -->
+      <form id="edit-note-form">
+        <!-- Campo de texto para el título de la nota -->
+        <input type="text" id="edit-title" placeholder="Título de la nota">
+        <!-- Campo de texto área para el contenido de la nota -->
+        <textarea id="edit-content" placeholder="Contenido de la nota"></textarea>
+        <!-- Botón para guardar cambios -->
+        <button id="save-note" onclick="saveNoteChanges()">Guardar cambios</button>
+        <!-- Botón para cancelar edición -->
+        <button id="cancel-edit" onclick="document.getElementById('edit-note-modal').style.display = 'none';">Cancelar</button>
+      </form>
+    </div>
+
+    <!-- Enlace a archivo de script JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
